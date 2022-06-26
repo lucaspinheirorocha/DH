@@ -7,7 +7,7 @@ public class Temperaturas {
     private int temperatraMaxima = 1;
 
     Temperaturas() {
-        this.insertIntoTemperaturas();
+        this.setTemperaturas();
     }
 
     public void getCidades() {
@@ -20,7 +20,15 @@ public class Temperaturas {
         }
     }
 
-    private void insertIntoTemperaturas() {
+    private int getTemperaturaMaxima(int index) {
+        return this.temperaturas[index][1];
+    }
+
+    private int getTemperaturaMinima(int index) {
+        return this.temperaturas[index][1];
+    }
+
+    private void setTemperaturas() {
         for (int linha = 0; linha < temperaturas.length; linha += 1) {
             switch (linha) {
                 case 0:
