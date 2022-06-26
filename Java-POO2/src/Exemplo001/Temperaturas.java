@@ -25,7 +25,7 @@ public class Temperaturas {
     }
 
     private int getTemperaturaMinima(int index) {
-        return this.temperaturas[index][1];
+        return this.temperaturas[index][0];
     }
 
     private void setTemperaturas() {
