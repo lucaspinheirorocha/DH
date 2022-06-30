@@ -1,6 +1,6 @@
 package pratica02;
 
-public class Veiculo {
+public class Veiculo{
     private String modelo;
     private String marca;
     private int preco;

@@ -1,5 +1,7 @@
 package pratica02;
 
+import java.util.Comparator;
+
 public class AppGaragem {
     public static void main(String[] args) {
 
@@ -29,6 +31,33 @@ public class AppGaragem {
         garagem01.adicionarVeiculo(fortuner);
         garagem01.adicionarVeiculo(logan);
 
-        garagem01.getListaDeVeiculos().stream().forEach(System.out::println);
+        garagem01.getListaDeVeiculos()
+                .stream()
+                .forEach(System.out::println);
+
+        garagem01.getListaDeVeiculos()
+                .stream()
+                .sorted(Comparator.comparingInt(Veiculo::getPreco)) // equivalente a (p1, p2) -> p1.getPreco() - p2.getPreco();
+                .forEach(System.out::println);
+
+        garagem01.getListaDeVeiculos()
+                .stream()
+                .sorted(Comparator.comparing(Veiculo::getMarca)) // equivale a (m1, m2) -> m1.getMarca().compareTo(m1.getMarca());
+                .forEach(System.out::println);
+
+        garagem01.getListaDeVeiculos()
+                .stream()
+                .filter(p -> p.getPreco() < 1000)
+                .forEach(System.out::println);
+
+        garagem01.getListaDeVeiculos()
+                .stream()
+                .filter(p -> p.getPreco() >= 1000)
+                .forEach(System.out::println);
+
+        System.out.println(garagem01.getListaDeVeiculos()
+                .stream()
+                .mapToDouble(Veiculo::getPreco)
+                .average().getAsDouble());
     }
 }
