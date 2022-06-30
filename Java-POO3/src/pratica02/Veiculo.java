@@ -1,11 +1,11 @@
 package pratica02;
 
-public class Veiculos {
+public class Veiculo {
     private String modelo;
     private String marca;
     private int preco;
 
-    public Veiculos(String modelo, String marca, int preco) {
+    public Veiculo(String modelo, String marca, int preco) {
         this.modelo = modelo;
         this.marca = marca;
         this.preco = preco;
@@ -37,10 +37,9 @@ public class Veiculos {
 
     @Override
     public String toString() {
-        return "Veiculo { " +
+        return "Veiculo " +
                 "modelo = '" + modelo + '\'' +
                 ", marca = '" + marca + '\'' +
-                ", preco = " + preco +
-                " }";
+                ", preco = " + preco;
     }
 }

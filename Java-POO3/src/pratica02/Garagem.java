@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Garagem {
     private int id;
-    private List<Veiculos> listaDeVeiculos;
+    private List<Veiculo> listaDeVeiculos;
 
     Garagem (int id) {
         this.id = id;
@@ -20,11 +20,11 @@ public class Garagem {
         this.id = id;
     }
 
-    public List<Veiculos> getListaDeVeiculos() {
+    public List<Veiculo> getListaDeVeiculos() {
         return listaDeVeiculos;
     }
 
-    public void adicionarVeiculo(Veiculos veiculo) {
+    public void adicionarVeiculo(Veiculo veiculo) {
         this.listaDeVeiculos.add(veiculo);
     }
 
